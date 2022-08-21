@@ -62,7 +62,6 @@ if training:
             print('Test loss: ', err / count, ' Train loss: ', sum(losses_history) / len(losses_history))
 
 else:
-    # calculation mAP metric
     model.load_state_dict(torch.load(load_path))
     model = model.to(device)
     losses = []
